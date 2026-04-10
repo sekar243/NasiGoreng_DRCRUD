@@ -20,6 +20,7 @@ namespace CRUDMahasiswaADO
         public Form1()
         {
             InitializeComponent();
+            conn = new SqlConnection(connctionString);
         }
 
         private void Form1_Load(object sender, EventArgs e)
