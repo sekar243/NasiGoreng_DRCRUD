@@ -143,7 +143,7 @@ namespace CRUDMahasiswaADO
                 cmd.Parameters.AddWithValue("@TanggalLahir", dtpTanggalLahir.Value);
                 cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
                 cmd.Parameters.AddWithValue("@KodeProdi", txtKodeProdi.Text);
-                cmd.Parameters.AddWithValue("@TanggalDaftar", txtTanggalDaftar.DateTime.Now);
+                cmd.Parameters.AddWithValue("@TanggalDaftar", DateTime.Now);
 
                 int result = cmd.ExecuteNonQuery();
 
@@ -249,7 +249,7 @@ namespace CRUDMahasiswaADO
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
