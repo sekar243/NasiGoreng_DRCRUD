@@ -138,6 +138,9 @@ namespace CRUDMahasiswaADO
             {
                 conn.Open();
             }
+            string query = "Update mahasiswa set nama = 'HACKED' where NIM = " + nim;
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.ExecuteNonQuery();
         }
     }
 }
