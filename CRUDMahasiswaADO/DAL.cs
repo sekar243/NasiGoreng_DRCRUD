@@ -105,5 +105,12 @@ namespace CRUDMahasiswaADO
             command.CommandType = CommandType.StoredProcedure;
             command.ExecuteNonQuery();
         }
+        public void DeleteMhs(string nim)
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+        }
     }
 }
