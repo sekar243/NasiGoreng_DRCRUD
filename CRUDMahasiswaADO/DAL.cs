@@ -87,7 +87,13 @@ namespace CRUDMahasiswaADO
                 conn.Close();
             }
         }
+        public void UpdateMhs(string nim, string nama, string alamat, string jenisKelamin, DateTime tanggalLahir, string kodeProdi, byte[] foto)
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
 
 
-    }
+        }
 }
