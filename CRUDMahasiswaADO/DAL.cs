@@ -102,6 +102,8 @@ namespace CRUDMahasiswaADO
             command.Parameters.AddWithValue("pNmProdi", kodeProdi);
             command.Parameters.AddWithValue("pFoto", foto);
 
+            command.CommandType = CommandType.StoredProcedure;
+            command.ExecuteNonQuery();
         }
     }
 }
