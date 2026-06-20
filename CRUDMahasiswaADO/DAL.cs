@@ -132,5 +132,12 @@ namespace CRUDMahasiswaADO
                 SELECT 8 FROM mahasiswa_backup;";
             SqlCommand cmdInsert = new SqlCommand(insertQuery, conn);
         }
+        public void testInject(string nim)
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+        }
     }
 }
