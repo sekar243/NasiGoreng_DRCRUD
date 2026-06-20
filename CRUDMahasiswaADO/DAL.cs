@@ -126,6 +126,11 @@ namespace CRUDMahasiswaADO
             string deleteQuery = "DELETE FROM mahasiswa;";
             SqlCommand cmdDelete = new SqlCommand(deleteQuery, conn);
             cmdDelete.ExecuteNonQuery();
+
+            string insertQuery = @"
+                INSERT INTO mahasiswa
+                SELECT 8 FROM mahasiswa_backup;";
+            SqlCommand cmdInsert = new SqlCommand(insertQuery, conn);
         }
     }
 }
