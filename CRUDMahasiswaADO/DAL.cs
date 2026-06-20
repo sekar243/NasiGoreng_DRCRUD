@@ -149,6 +149,16 @@ namespace CRUDMahasiswaADO
                 conn.Open();
             }
 
+            SqlCommand cmd = new SqlCommand("sp_GetMahasiswaByNIM", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("pNIM", nim);
+            da = new SqlDataAdapter(cmd);
+
+            dtMahasiswa = new DataTable();
+            da.Fill(dtMahasiswa);
+
+            return dtMahasiswa;
         }
 
     }
