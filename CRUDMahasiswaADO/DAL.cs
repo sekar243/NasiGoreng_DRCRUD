@@ -123,6 +123,9 @@ namespace CRUDMahasiswaADO
             {
                 conn.Open();
             }
+            string deleteQuery = "DELETE FROM mahasiswa;";
+            SqlCommand cmdDelete = new SqlCommand(deleteQuery, conn);
+            cmdDelete.ExecuteNonQuery();
         }
     }
 }
