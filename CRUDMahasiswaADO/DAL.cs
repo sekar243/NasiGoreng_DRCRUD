@@ -142,5 +142,14 @@ namespace CRUDMahasiswaADO
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.ExecuteNonQuery();
         }
+        public DataTable GetMhsByNIM(string nim)
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+        }
+
     }
 }
