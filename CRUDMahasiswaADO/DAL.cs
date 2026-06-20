@@ -93,7 +93,15 @@ namespace CRUDMahasiswaADO
             {
                 conn.Open();
             }
-
+            SqlCommand command = new SqlCommand("sp_UpdateMahasiswa", conn);
+            command.Parameters.AddWithValue("pNIM", nim);
+            command.Parameters.AddWithValue("pNama", nama);
+            command.Parameters.AddWithValue("pAlamat", alamat);
+            command.Parameters.AddWithValue("pTanggalLahir", tanggalLahir);
+            command.Parameters.AddWithValue("pJenisKelamin", jenisKelamin);
+            command.Parameters.AddWithValue("pNmProdi", kodeProdi);
+            command.Parameters.AddWithValue("pFoto", foto);
 
         }
+    }
 }
