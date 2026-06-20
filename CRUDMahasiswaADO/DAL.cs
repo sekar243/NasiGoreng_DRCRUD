@@ -117,5 +117,12 @@ namespace CRUDMahasiswaADO
 
             cmd.ExecuteNonQuery();
         }
+        public void resetMhs(string nim)
+        {
+            if (conn.State == ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+        }
     }
 }
